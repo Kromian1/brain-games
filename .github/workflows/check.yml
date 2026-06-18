@@ -1,0 +1,23 @@
+name: check.yml
+on: push
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@805dfa40c13b95eec1ac8e24b5afffcfeddae9f8
+        with:
+          php-version: '8.0'
+          coverage: pcov
+          tools: composer
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Linter
+        run: make lint
