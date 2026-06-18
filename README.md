@@ -73,3 +73,9 @@ make launcher
 - **Brain Prime**: https://asciinema.org/a/Tu3k9dyN6oHV6k04cSVUTEf4F
 
 - **Brain Progression**: https://asciinema.org/a/siSPvVCGaMzJoNsLuwXEL4Cjd
+
+## Автор
+
+**Михаил Кузнецов**
+
+**GitHub:** https://github.com/Kromian1
