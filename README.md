@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+### Статус проекта:
 [![check.yml](https://github.com/Kromian1/php-project-45/actions/workflows/check.yml/badge.svg)](https://github.com/Kromian1/php-project-45/actions/workflows/check.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Kromian1_php-project-45&metric=alert_status&token=f6987d8085321cfb7a7481fcbd9191619e5631bc)](https://sonarcloud.io/summary/new_code?id=Kromian1_php-project-45)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Kromian1_php-project-45&metric=bugs&token=f6987d8085321cfb7a7481fcbd9191619e5631bc)](https://sonarcloud.io/summary/new_code?id=Kromian1_php-project-45)
@@ -12,7 +12,7 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Kromian1_php-project-45&metric=vulnerabilities&token=f6987d8085321cfb7a7481fcbd9191619e5631bc)](https://sonarcloud.io/summary/new_code?id=Kromian1_php-project-45)
 # Brain Games
 
-Набор из 5 математических игр для развития логического мышления, написанных на PHP.
+Brain Games — консольное приложение на PHP, содержащее набор математических игр. Каждая игра генерирует случайные вопросы и проверяет ответы пользователя.
 
 ## Доступные игры:
 
@@ -24,53 +24,39 @@
 
 ##  Установка:
 
+```bash
 git clone https://github.com/Kromian1/php-project-45.git
-
 cd php-project-45
-
 make install
-
-Скрипты в bin должны быть исполняемыми (chmod +x bin/*)
+```
 
 ## Запуск:
 
 **Меню выбора игры:**
 
+```bash
 make launcher
+```
 
-**Запуск конкретной игры:**
+**Запуск игр:**
 
-make even    # Определение четности числа
+| Команда | Игра |
+|----------|-------|
+| `make even` | Проверка на чётность |
+| `make calc` | Калькулятор |
+| `make gcd` | НОД |
+| `make prime` | Простое число |
+| `make progression` | Прогрессия |
 
-make calc    # Арифметические выражения
+## Структура проекта:
 
-make gcd     # Наибольший общий делитель
+| Каталог / Файл | Назначение |
+|---------------|------------|
+| `bin/` | Исполняемые файлы для запуска игр |
+| `src/Cli.php` | Работа с пользовательским вводом и выводом |
+| `src/Engine.php` | Общая игровая логика и цикл выполнения игр |
+| `src/Games/` | Реализации игровых сценариев: Even, Calc, Gcd, Progression, Prime и Launcher |
 
-make prime   # Проверка числа на простоту
-
-make progression  # Поиск пропущенного числа в прогрессии
-
-## Структура репозитория:
-
-.
-
-├── bin/                  # скрипты запуска 
-
-├── src/                  # исходный код логики игр
-
-├── .github/              # CI / workflow конфигурации
-
-├── .vscode/              # настройки для VS Code (если есть)
-
-├── composer.json
-
-├── composer.lock
-
-├── Makefile              # команды сборки и запуска
-
-├── README.md             # этот файл
-
-└── .gitignore
 
 ## Требования:
 - PHP 8.0+
@@ -78,12 +64,12 @@ make progression  # Поиск пропущенного числа в прогр
 
 ## Пример сессии игры (Asciinema):
 
-**Brain Even**: https://asciinema.org/a/NlLBXyOl7idgoTrTIYKJRDlIf
+- **Brain Even**: https://asciinema.org/a/NlLBXyOl7idgoTrTIYKJRDlIf
 
-**Brain Calc**: https://asciinema.org/a/5UReAlDy3kAVsV2xKYYxgk5sE
+- **Brain Calc**: https://asciinema.org/a/5UReAlDy3kAVsV2xKYYxgk5sE
 
-**Brain GCD**: https://asciinema.org/a/vRpXBcn4DlrZvvNkECB5FKdeC
+- **Brain GCD**: https://asciinema.org/a/vRpXBcn4DlrZvvNkECB5FKdeC
 
-**Brain Prime**: https://asciinema.org/a/Tu3k9dyN6oHV6k04cSVUTEf4F
+- **Brain Prime**: https://asciinema.org/a/Tu3k9dyN6oHV6k04cSVUTEf4F
 
-**Brain Progression**: https://asciinema.org/a/siSPvVCGaMzJoNsLuwXEL4Cjd
+- **Brain Progression**: https://asciinema.org/a/siSPvVCGaMzJoNsLuwXEL4Cjd
